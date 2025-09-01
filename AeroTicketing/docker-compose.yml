@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  aeroticketing.api:
+    image: ${DOCKER_REGISTRY-}aeroticketingapi
+    container_name: aeroticketing.api
+    build:
+      context: .
+      dockerfile: AeroTicketing.Api/Dockerfile
+    ports:
+      - 5000:8080
+      - 5001:8081
+    environment:
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://aeroticketing.aspire-dashboard:18889
+      - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+
+  aeroticketing.database:
+    image: postgres:17.2
+    container_name: aeroticketing.database
+    environment:
+      POSTGRES_DB: aeroticketing
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.containers/postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  aeroticketing.aspire-dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+    container_name: aeroticketing.aspire-dashboard
+    environment:
+        DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: true
+    ports:
+     - 18888:18888
