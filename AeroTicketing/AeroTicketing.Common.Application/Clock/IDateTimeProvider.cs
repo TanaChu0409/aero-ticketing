@@ -1,4 +1,5 @@
 ﻿namespace AeroTicketing.Common.Application.Clock;
-internal interface IDateTimeProvider
+public interface IDateTimeProvider
 {
+    public DateTime UtcNow { get; }
 }

@@ -1,5 +1,6 @@
-using AeroTicketing.Api.Extensions;
+﻿using AeroTicketing.Api.Extensions;
 using AeroTicketing.Api.Middleware;
+using AeroTicketing.Modules.Users.Infrastructure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,8 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerDocumentation();
+
+builder.Services.AddUsersModule(builder.Configuration);
 
 WebApplication app = builder.Build();
 

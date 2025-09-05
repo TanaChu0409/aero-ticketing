@@ -19,11 +19,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{021658B3-8FDA-4330-AF40-A5C9C4B94D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroTicketing.Common.Domain", "AeroTicketing.Common.Domain\AeroTicketing.Common.Domain.csproj", "{38F55289-DC93-4E43-B8BA-F8EA708982CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeroTicketing.Common.Domain", "AeroTicketing.Common.Domain\AeroTicketing.Common.Domain.csproj", "{38F55289-DC93-4E43-B8BA-F8EA708982CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroTicketing.Common.Infrastructure", "AeroTicketing.Common.Infrastructure\AeroTicketing.Common.Infrastructure.csproj", "{6BB8170A-8D29-4579-ABBE-4A54B519F4DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeroTicketing.Common.Infrastructure", "AeroTicketing.Common.Infrastructure\AeroTicketing.Common.Infrastructure.csproj", "{6BB8170A-8D29-4579-ABBE-4A54B519F4DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroTicketing.Common.Application", "AeroTicketing.Common.Application\AeroTicketing.Common.Application.csproj", "{F30508CC-FC5C-4509-A309-62F89312457E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeroTicketing.Common.Application", "AeroTicketing.Common.Application\AeroTicketing.Common.Application.csproj", "{F30508CC-FC5C-4509-A309-62F89312457E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{A191C284-AA39-4EBD-8895-AFC36E9A9F8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{0B96EEDA-CD0B-4E26-B7C1-175D5C91199D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D22DBB64-B381-41E1-ABD5-DAA38E95EBEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeroTicketing.Modules.Users.Domain", "AeroTicketing.Modules.Users.Domain\AeroTicketing.Modules.Users.Domain.csproj", "{C94975D6-8770-45FA-A398-2012ADD88F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroTicketing.Modules.Users.Infrastructure", "AeroTicketing.Modules.Users.Infrastructure\AeroTicketing.Modules.Users.Infrastructure.csproj", "{4526669E-13C1-4E49-A3EB-169FCB5B5D66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +61,14 @@ Global
 		{F30508CC-FC5C-4509-A309-62F89312457E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30508CC-FC5C-4509-A309-62F89312457E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F30508CC-FC5C-4509-A309-62F89312457E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94975D6-8770-45FA-A398-2012ADD88F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94975D6-8770-45FA-A398-2012ADD88F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94975D6-8770-45FA-A398-2012ADD88F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94975D6-8770-45FA-A398-2012ADD88F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4526669E-13C1-4E49-A3EB-169FCB5B5D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4526669E-13C1-4E49-A3EB-169FCB5B5D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4526669E-13C1-4E49-A3EB-169FCB5B5D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4526669E-13C1-4E49-A3EB-169FCB5B5D66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +80,11 @@ Global
 		{38F55289-DC93-4E43-B8BA-F8EA708982CC} = {021658B3-8FDA-4330-AF40-A5C9C4B94D5E}
 		{6BB8170A-8D29-4579-ABBE-4A54B519F4DB} = {021658B3-8FDA-4330-AF40-A5C9C4B94D5E}
 		{F30508CC-FC5C-4509-A309-62F89312457E} = {021658B3-8FDA-4330-AF40-A5C9C4B94D5E}
+		{A191C284-AA39-4EBD-8895-AFC36E9A9F8D} = {8FFB0E9D-5817-428C-9689-BD8474799EA6}
+		{0B96EEDA-CD0B-4E26-B7C1-175D5C91199D} = {A191C284-AA39-4EBD-8895-AFC36E9A9F8D}
+		{D22DBB64-B381-41E1-ABD5-DAA38E95EBEC} = {0B96EEDA-CD0B-4E26-B7C1-175D5C91199D}
+		{C94975D6-8770-45FA-A398-2012ADD88F5B} = {0B96EEDA-CD0B-4E26-B7C1-175D5C91199D}
+		{4526669E-13C1-4E49-A3EB-169FCB5B5D66} = {0B96EEDA-CD0B-4E26-B7C1-175D5C91199D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9046FFF-21BC-43FE-AD21-C5E1BAFFF780}
