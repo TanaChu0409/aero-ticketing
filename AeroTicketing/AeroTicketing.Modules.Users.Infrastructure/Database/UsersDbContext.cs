@@ -1,9 +1,10 @@
-﻿using AeroTicketing.Modules.Users.Domain.Users;
+﻿using AeroTicketing.Modules.Users.Application.Abstractions.Data;
+using AeroTicketing.Modules.Users.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace AeroTicketing.Modules.Users.Infrastructure.Database;
 public sealed class UsersDbContext(DbContextOptions<UsersDbContext> options)
-    : DbContext(options)
+    : DbContext(options), IUnitOfWork
 {
     internal DbSet<User> Users { get; set; }
 

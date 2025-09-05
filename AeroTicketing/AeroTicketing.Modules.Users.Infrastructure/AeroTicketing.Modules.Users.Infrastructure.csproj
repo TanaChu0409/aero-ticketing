@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\AeroTicketing.Common.Infrastructure\AeroTicketing.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\AeroTicketing.Modules.Users.Application\AeroTicketing.Modules.Users.Application.csproj" />
     <ProjectReference Include="..\AeroTicketing.Modules.Users.Domain\AeroTicketing.Modules.Users.Domain.csproj" />
   </ItemGroup>
 </Project>

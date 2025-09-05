@@ -1,4 +1,7 @@
-﻿using AeroTicketing.Modules.Users.Infrastructure.Database;
+﻿using AeroTicketing.Modules.Users.Application.Abstractions.Data;
+using AeroTicketing.Modules.Users.Domain.Users;
+using AeroTicketing.Modules.Users.Infrastructure.Database;
+using AeroTicketing.Modules.Users.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -28,5 +31,9 @@ public static class UserModule
                     npgsqlOptions =>
                         npgsqlOptions.MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.Users))
                 .UseSnakeCaseNamingConvention());
+
+        service.AddScoped<IUserRepository, UserRepository>();
+
+        service.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<UsersDbContext>());
     }
 }
